@@ -9,6 +9,7 @@ A full-stack semantic search system that retrieves results based on meaning, not
 This is a two-layer semantic search engine that understands meaning instead of relying on keyword matching.
 
 It combines:
+
 - dense vector embeddings
 - approximate nearest neighbor search (HNSW)
 - neural reranking
