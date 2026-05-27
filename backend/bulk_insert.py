@@ -72,7 +72,6 @@ def bulk_insert(filepath: str):
             )
             conn.commit()
 
-            # save checkpoint after every successful batch
             save_checkpoint(i + BATCH_SIZE)
 
     except KeyboardInterrupt:

@@ -45,7 +45,6 @@ def insert(req: InsertRequest):
 def search(query: str, top_k: int = 5, threshold: float = 0.35):
     total_start = time.perf_counter()
 
-    # Embedding stage
     embed_start = time.perf_counter()
     vec = embed(query)
     embedding_ms = round((time.perf_counter() - embed_start) * 1000, 2)
@@ -53,7 +52,6 @@ def search(query: str, top_k: int = 5, threshold: float = 0.35):
     conn = get_conn()
     cur = conn.cursor()
 
-    # Vector search stage
     search_start = time.perf_counter()
 
     cur.execute("""
